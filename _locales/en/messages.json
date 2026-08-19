@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "AI PR Reviewer"
+  },
+  "extensionDescription": {
+    "message": "Review GitHub Pull Requests with AI (OpenAI, Gemini, Claude, Grok or Groq) using your own API key. Find bugs, suggest improvements and export corrected files."
+  }
+}

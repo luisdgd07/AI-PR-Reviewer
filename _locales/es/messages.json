@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "AI PR Reviewer"
+  },
+  "extensionDescription": {
+    "message": "Revisa Pull Requests de GitHub con IA (OpenAI, Gemini, Claude, Grok o Groq) usando tu propia API key. Encuentra bugs, sugiere mejoras y exporta archivos corregidos."
+  }
+}
