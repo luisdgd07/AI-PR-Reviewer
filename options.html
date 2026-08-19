@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Opciones — AI PR Reviewer</title>
+<link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 AI PR Reviewer — Configuración</h1>
+    <p class="intro">Elige tu proveedor de IA preferido y pega tu propia API key. Se guarda solo en tu navegador.</p>
+
+    <label for="providerSelect">Proveedor activo</label>
+    <select id="providerSelect">
+      <option value="openai">OpenAI</option>
+      <option value="gemini">Google Gemini</option>
+      <option value="claude">Anthropic Claude</option>
+      <option value="grok">xAI Grok</option>
+      <option value="groq">Groq</option>
+    </select>
+
+    <div id="providerForms"></div>
+
+    <div class="provider-block" id="githubBlock">
+      <h3>GitHub — repos privados (opcional)</h3>
+      <p class="provider-hint">
+        Solo necesario si vas a revisar PRs de repositorios privados. Crea un
+        <a href="https://github.com/settings/tokens?type=beta" target="_blank">token de acceso personal (fine-grained)</a>
+        con permiso de lectura de contenido ("Contents: Read-only") sobre esos repos, o un
+        <a href="https://github.com/settings/tokens/new" target="_blank">token clásico</a> con el scope <code>repo</code>.
+      </p>
+      <label>GitHub Personal Access Token</label>
+      <div class="key-row">
+        <input type="password" id="githubTokenInput" placeholder="ghp_... o github_pat_..." />
+        <button type="button" class="toggle-visibility" id="toggleGithubToken">👁</button>
+      </div>
+    </div>
+
+    <button id="saveBtn">Guardar configuración</button>
+    <div id="saveStatus"></div>
+
+    <div class="donation-section">
+      <p>Si te gusta la extensión, considera hacer una donación para apoyar su desarrollo.</p>
+      <a href="https://paypal.me/LGonzalezduerto" target="_blank" class="donate-button">
+        ❤️ Donar con PayPal
+      </a>
+    </div>
+  </div>
+  <script src="providers.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

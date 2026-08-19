@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>AI PR Reviewer</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>🤖 AI PR Reviewer</h1>
+  <div id="status-box"></div>
+  <div id="onPrPage" class="hidden">
+    <p>Estás en un Pull Request de GitHub. Usa el botón flotante <strong>"Revisar PR con IA"</strong> que aparece en la esquina inferior derecha de la página.</p>
+  </div>
+  <div id="notOnPrPage" class="hidden">
+    <p>Abre un Pull Request en GitHub (una URL como <code>github.com/owner/repo/pull/123</code>) para poder revisarlo.</p>
+  </div>
+  <button id="openOptions">⚙ Configurar API key</button>
+  <p class="footer">Tus API keys se guardan solo en tu navegador (chrome.storage local). Nunca se envían a ningún servidor excepto al proveedor de IA que elijas.</p>
+  
+    <div class="donation-section">
+      <p>Si te gusta la extensión, considera hacer una donación para apoyar su desarrollo.</p>
+      <a href="https://paypal.me/LGonzalezduerto" target="_blank" class="donate-button">
+        ❤️ Donar con PayPal
+      </a>
+    </div>
+  <script src="popup.js"></script>
+</body>
+</html>

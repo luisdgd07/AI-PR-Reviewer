@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "AI PR Reviewer",
+  "version": "1.0.0",
+  "description": "Revisa Pull Requests de GitHub con IA (OpenAI, Gemini, Claude, Grok o Groq) usando tu propia API key. Encuentra bugs, sugiere mejoras y exporta archivos corregidos.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://api.github.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://patch-diff.githubusercontent.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.anthropic.com/*",
+    "https://api.x.ai/*",
+    "https://api.groq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*/pull/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI PR Reviewer",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
